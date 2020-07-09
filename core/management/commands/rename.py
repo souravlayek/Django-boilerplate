@@ -10,7 +10,7 @@ class Command(BaseCommand):
                             help="the new django project name")
 
     def handle(self, *args, **kwargs):
-        new_project_name = kwargs('new_project_name')
+        new_project_name = kwargs['new_project_name']
 
         # bit of logic to rename the project
         files_to_rename = ['demo/settings/base.py',
