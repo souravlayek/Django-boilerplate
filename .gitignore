@@ -11,4 +11,4 @@ media
 !.gitignore
 !.travis.yml
 /.env
-/.vscode
+!/.vscode
