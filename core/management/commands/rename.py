@@ -9,7 +9,7 @@ class Command(BaseCommand):
         parser.add_argument('new_project_name', type=str,
                             help="the new django project name")
 
-    def handel(self, *args, **kwargs):
+    def handle(self, *args, **kwargs):
         new_project_name = kwargs('new_project_name')
 
         # bit of logic to rename the project
