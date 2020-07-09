@@ -1,6 +1,6 @@
 from .base import *
 
-DEBUG = False
+DEBUG = config('DEBUG', cust=bool)
 ALLOWED_HOSTS = ['ip-adddress', 'www.your-domain.com']
 
 # Password validation
@@ -15,10 +15,10 @@ AUTH_PASSWORD_VALIDATORS = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgress_db_name',
-        'USER': 'dB username',
-        'PASSWORD': 'db password',
-        'HOST': 'localhost',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD':config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
         'PORT':''
     }
 }
